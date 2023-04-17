@@ -1,0 +1,10 @@
+:root {
+    --color-1: #000f8f;
+    --color-2: #3e48b4;
+    --color-3: #7d82da;
+    --color-4: #bbbbff;
+    --black: #000;
+    --white: #fff;
+    --transition: all .2s ease-in-out;
+    --fontFamily1: "Source Sans Pro";
+}

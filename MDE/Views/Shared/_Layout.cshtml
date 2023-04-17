@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="rating" content="general" />
+    <link rel="stylesheet" type="text/css" href="~/lib/fontawesome-free-6.4.0-web/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/fontawesome-free-6.4.0-web/css/brands.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/fontawesome-free-6.4.0-web/css/solid.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/variables.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+    <title>Museu das Emoções - @ViewData["Title"]</title>
+</head>
+<body>
+    <header>
+        <a class="text" asp-action="Index" asp-controller="Home">
+            <img class="logo" src="~/images/logotipo/Logotipo-22.png" alt="logotipo" />
+        </a>
+        <div class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <div class="menu">
+        <div class="header">
+            <img class="logo" src="~/images/logotipo/Logotipo-14.png" alt="logotipo" />
+            <div class="btn">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="body">
+            <a class="text" asp-action="Index" asp-controller="Home">Ínicio</a>
+            <a class="text" asp-action="Member" asp-controller="Home">Associa-te</a>
+            <a class="text" asp-action="News" asp-controller="Home">Notícias</a>
+        </div>
+    </div>
+    @RenderBody()
+    <footer>
+        <h2 class="title">Contactos</h2>
+        <div class="contacts">
+            <div class="container">
+                <h4 class="title">Morada</h4>
+                <p class="text">Praceta Luís de Camões,<br />Torre 1 8º C<br/>2735 - 401 Mira-Sintra</p>
+            </div>
+            <div class="container">
+                <h4 class="title">Telemóvel</h4>
+                <a href="tel:+351962703551" class="text">+351 962 703 551</a>
+            </div>
+            <div class="container">
+                <h4 class="title">E-mail</h4>
+                <a href="mailto:info@emocoes.pt" class="text">info@emocoes.pt</a>
+                <br /><br />
+                <a href="mailto:paulo.sm.oliveira@gmail.com" class="text">paulo.sm.oliveira@gmail.com</a>
+            </div>
+            <div class="container">
+                <h4 class="title">Redes Sociais</h4>
+                <i class="fa-brands fa-facebook"></i><a href="#" class="text">museudasemocoes</a>
+                <br /><br />
+                <i class="fa-brands fa-instagram"></i><a href="#" class="text">museu_emocoes</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="text">Museu das Emoções &copy; 2023 | Desenvolvido por <a href="#">Nuno Silva</a></p>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/anime/anime.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

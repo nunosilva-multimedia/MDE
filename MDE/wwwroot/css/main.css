@@ -1,0 +1,584 @@
+﻿:root {
+	font-size: 8px;
+}
+
+:focus {
+	outline: none;
+}
+
+body {
+	padding: 0%;
+	margin: 0%;
+	box-sizing: border-box;
+	font-family: var(--fontFamily1);
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	font-size: 1rem;
+	background-color: var(--color-1);
+	color: var(--white);
+}
+
+header {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	background-color: var(--color-4);
+	height: 90px;
+	width: 100%;
+	z-index: 5;
+	transition: all .1s;
+	-webkit-transition: all .1s;
+}
+
+header .logo {
+	padding: 0px 15px;
+	width: 110px;
+	height: 58px;
+}
+
+header .btn {
+	margin: 0 0 0 auto;
+	padding: 0px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35px;
+	height: 20px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+header > .btn span {
+    position: absolute;
+    width: inherit;
+    height: 4px;
+    background-color: var(--color-1);
+	border-radius: 25px;
+    transition: all .1s;
+    -webkit-transition: all .1s;
+}
+
+header > .btn span:first-child {
+	top: 32.5px;
+}
+
+header > .btn span:last-child {
+	bottom: 32.5px;
+}
+
+header.fixed {
+	height: 60px;
+}
+
+header.fixed .logo {
+	width: 90px;
+	height: 48px;
+}
+
+header.fixed > .btn span:first-child {
+	top: 20px;
+}
+
+header.fixed > .btn span:last-child {
+	bottom: 20px;
+}
+
+.menu {
+	top: -300px;
+	position: fixed;
+	background-color: var(--color-2);
+	height: 300px;
+	z-index: 10;
+	width: 100%;
+	transition: all .1s;
+	-webkit-transition: all .1s;
+}
+
+.menu .header {
+	display: flex;
+	position: relative;
+	align-items:center;
+	height: 90px;
+}
+
+.menu .header .btn {
+	margin: 0 0 0 auto;
+	padding: 0px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35px;
+	height: 35px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.menu .header .btn span {
+	position: relative;
+	width: 30px;
+	height: 3px;
+	background-color: var(--white);
+	border-radius: 25px;
+	transition: all .1s;
+	-webkit-transition: all .1s;
+}
+
+.menu .header .btn span {
+	position: absolute;
+}
+
+.menu .header .btn span:first-child {
+	transform: rotate(45deg);
+}
+
+.menu .header .btn span:last-child {
+	transform: rotate(-45deg);
+}
+
+.menu .logo {
+	padding: 0px 15px;
+	width: 110px;
+	height: 58px;
+}
+
+.menu .body {
+	padding: 0px 55px;
+	display: flex;
+	flex-direction: column;
+}
+
+.menu .body a {
+	padding: 7.5px 0px;
+	margin: 0;
+	color: var(--white);
+	font-family: var(--fontFamily1);
+	font-size: 3.15rem;
+	font-weight: 800;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.menu.open {
+	top: 0px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: var(--color-4);
+}
+
+main .desktop {
+	display: none;
+}
+
+main .logo {
+	min-height: 357px;
+	min-width: 312px;
+	max-width: 736px;
+	width:100%;
+}
+
+main .logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+main .cta {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	height: 100px;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+main .cta img {
+	position: relative;
+	bottom: 55px;
+	max-width: 40px;
+	width: 100%;
+	animation-name: arrowAnim;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes arrowAnim {
+	from {
+		bottom: 55px;
+	}
+
+	to {
+		bottom: -105px;
+	}
+}
+
+.about,
+.news,
+.services,
+.partners,
+.member,
+.discounts,
+footer {
+padding: 32.5px 30px;
+}
+
+.about > .title,
+.news > .title,
+.services > .title,
+.partners > .title,
+footer > .title,
+.member > .title,
+.discounts > .title{
+	padding: 0;
+	padding-bottom: 25px;
+	margin: 0;
+	color: var(--color-4);
+	font-family: var(--fontFamily1);
+	font-size: 5.3rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.news .list .article .title,
+.services > .subtitle,
+.member .youth .title,
+.member .effective .title {
+	padding: 0;
+	margin: 0;
+	font-family: var(--fontFamily1);
+	font-size: 3.15rem;
+	font-weight: 800;
+}
+
+.services h3:last-child {
+	padding: 25px 0 0 0;
+}
+
+.services > .topic,
+.partners .list .name,
+footer .contacts .container .title {
+	padding: 20px 0px 15px 0px;
+	margin: 0;
+	font-family: var(--fontFamily1);
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+.about > .text,
+.services > .text,
+.member .text,
+.discounts .text,
+footer .contacts .container .text {
+	padding: 0;
+	margin: 0;
+	font-family: var(--fontFamily1);
+	font-size: 2.5rem;
+	font-weight: 300;
+	text-decoration: none;
+}
+
+.news .list .article {
+	padding: 17.5px 0px;
+}
+
+.discounts .list .partner{
+	padding: 25px 0px;
+}
+
+.news .list .article .title{
+	padding-bottom: 15px;
+}
+
+.news .list .image {
+	margin: 0px;
+	max-width: 300px;
+	height: 200px;
+	width: 100%;
+}
+
+.partners .list .image,
+.discounts .list .image {
+	margin: 0px;
+	padding: 15px 30px;
+	max-width: 250px;
+	height: 120px;
+	width: 100%;
+}
+
+.news .list .article,
+.partners .list .partner,
+.discounts .list .partner {
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.news .list .image img,
+.partners .list .image img,
+.discounts .list .image img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+.news .list .image img {
+	object-fit: cover;
+}
+
+.partners .list .image.black,
+.discounts .list .image.black {
+	background-color: var(--black);
+}
+
+
+.partners .list .image.white,
+.discounts .list .image.white {
+	background-color: var(--white);
+}
+
+.partners .list .name{
+	text-align: center;
+}
+
+.member .youth ,
+.member .effective {
+	padding: 12.5px 0px;
+}
+
+.member .youth .title,
+.member .effective .title {
+	padding: 10px 0;
+}
+
+.discounts .partner .text {
+	padding: 25px 0px 0px 0px;
+	text-align: center;
+}
+
+footer {
+	padding: 0;
+	background-color: var(--color-4);
+	color: var(--color-1) !important;
+}
+
+footer > .title {
+	padding: 32.5px 30px 25px 30px;
+	color: var(--color-1) !important;
+}
+
+footer .contacts {
+	padding: 0 30px 40px 30px;
+}
+
+footer .contacts .container .text,
+footer .contacts .container i {
+	padding: 0;
+	margin: 0;
+	color: var(--color-1) !important;
+	font-size: 2.5rem;
+	font-weight: 300;
+}
+
+footer .contacts .container a:hover{
+	font-weight: 400;
+}
+
+footer .contacts .container i{
+	padding-right: 10px;
+}
+
+footer .copyright {
+	padding: 15px 0px;
+	background-color: var(--color-3);
+	width: 100%;
+}
+
+footer .copyright .text,
+footer .copyright .text a {
+	padding: 0;
+	margin: 0;
+	color: var(--white);
+	font-size: 1.2rem;
+	text-align: center;
+	text-decoration: none;
+}
+
+footer .copyright .text a:hover {
+	color: var(--color-1);
+}
+
+.h-padding {
+	padding: 155px 30px 32.5px 30px;
+}
+
+@media (min-width: 900px) {
+
+	header {
+		height: 110px;
+	}
+
+	header .logo {
+		padding: 0px 30px;
+		width: 200px;
+		height: auto;
+	}
+
+	header .btn {
+		width: 60px;
+		height: 40px;
+	}
+
+	header.fixed {
+		height: 85px;
+	}
+
+	header.fixed .logo {
+		width: 175px;
+		height: auto;
+	}
+
+	header.fixed .btn {
+		width: 60px;
+		height: 30px;
+	}
+
+	main .logo {
+		max-width: 700px;
+		width: 100%;
+	}
+
+	.about,
+	.news,
+	.services,
+	.partners,
+	.member,
+	.discounts,
+	footer {
+		padding: 40px 30px;
+	}
+
+	.about > .title,
+	.news > .title,
+	.services > .title,
+	.partners > .title,
+	footer > .title,
+	.member > .title,
+	.discounts > .title {
+		font-size: 8rem;
+	}
+
+	.news .list .article .title,
+	.services > .subtitle,
+	.member .youth .title,
+	.member .effective .title {
+		font-size: 4.15rem;
+	}
+
+	.services > .topic,
+	.partners .list .name,
+	footer .contacts .container .title,
+	.about > .text,
+	.services > .text,
+	.member .text,
+	.discounts .text,
+	footer .contacts .container .text {
+		font-size: 3.5rem;
+	}
+
+	.news .list,
+	.partners .list,
+	.discounts .list {
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.news .list .article, .partners .list .partner, .discounts .list .partner {
+		max-width: 550px;
+		width: 100%;
+	}
+
+	.news .list .image {
+		max-width: 550px;
+		height: 330px;
+	}
+
+	.partners .list .image,
+	.discounts .list .image {
+		max-width: 500px;
+		height: 270px;
+	}
+
+	footer {
+		padding: 0;
+		text-align:center;
+	}
+
+	.h-padding {
+		padding: 155px 40px 40px 40px;
+	}
+
+	main .cta img {
+		max-width: 80px;
+	}
+
+}
+
+@media (min-width: 1024px) {
+
+
+	main .desktop {
+		display: block;
+	}
+
+	main .mobile {
+		display: none;
+	}
+
+	main .logo {
+		max-width: 1200px;
+		width: 100%;
+	}
+
+	.about,
+	.news,
+	.services,
+	.partners,
+	.member,
+	.discounts,
+	footer {
+		padding: 50px 100px;
+	}
+
+	.news .list .article, .partners .list .partner, .discounts .list .partner {
+		max-width: 650px;
+		width: 100%;
+	}
+
+	footer .copyright .text,
+	footer .copyright .text a {
+		font-size: 1.5rem;
+	}
+
+	footer{
+		padding: 0px;
+	}
+
+	.h-padding {
+		padding: 155px 100px 50px 100px;
+	}
+
+	main .cta img {
+		max-width: 100px;
+	}
+}
